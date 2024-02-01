@@ -1,12 +1,12 @@
 {% extends "components/base.html" %}
-
+{% load django_tags %}
 {% block title%}Жалобы{% endblock title%}
 
 {% block main %}
 
 
 <div class="flex flex-col gap-y-5 mx-80 mt-48">
-    <h3 class="mt-10  text-3xl font-bold leading-9 tracking-tight text-gray-900">Жалобы:</h3>
+    <h3 class="mt-10  text-3xl font-bold leading-9 tracking-tight text-gray-900">Жалобы {% digit_beatify {% digit_beatify i.price %} %}:</h3>
     {% for i in obj %}
     <a href="{% url 'statement' i.id%}" class=" bg-white border border-3 rounded border-slate-950 w-96 text-gray-900 font-bold pl-2"> [{{ i.report_time|date:"Y-m-d" }}] {{i.name}}</a>
     {% endfor%}
