@@ -7,9 +7,9 @@
 
 <form class="flex flex-col gap-y-5 mx-80 mt-48" method="POST" action="{% url 'home' %}" enctype="multipart/form-data">
         {% csrf_token %}
-        <h3 class = 'mt-10 text-2xl font-bold leading-9 tracking-tight text-gray-900'> Заполните форму</h3>
-        <input type="text" name="name" id="" class='border border-3 rounded-full border-gray-950 w-96 h-10 pl-5 ' placeholder="Имя" required>
-        <textarea name="report_text" id="" cols="30" rows="10"placeholder="Жалоба" class="border py-5 pl-5 border-3 rounded-lg border-gray-950 w-96 resize-none" required></textarea>
+        <h3 class = 'mt-10 text-3xl font-bold leading-9 tracking-tight text-gray-900'> Заполните форму</h3>
+        <input type="text" name="name" id="" class='border border-3 rounded-lg border-gray-950 w-96 h-10 pl-5 ' placeholder="Имя" required>
+        <textarea name="report_text" id="" cols="30" rows="10"placeholder="Жалоба" class="border p-3 border-3 rounded-lg border-gray-950 w-96 resize-none" required></textarea>
         <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold py-0.5 px-3 rounded w-52 h-9">Отправить</button>
 
     </form>
